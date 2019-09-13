@@ -1,8 +1,5 @@
 [{
-        "safeguardsConsiderations": "Categories"
-    },
-    {
-        "safeguardsConsiderations": "Identity and Access Management ",
+        "safeguardsConsiderations": "Identity and Access Management",
         "controls": "Prevent unauthorized access to endpoints and mobile devices by enabling a password protected screen lock after inactivity/timeout.",
         "details": "To prevent unauthorized access to laptops, servers, and mobile devices, companies should protect devices by requiring passwords or passcodes after a reasonable period of inactivity. Tool examples: AirWatch, JAMF (Mac), Active Directory GPOs, Office365 (E1 plans & higher), GSuite MDM ",
         "suggestedTools": "AirWatch, JAMF (Mac), Active Directory GPOs, Office365 (E1 plans & higher), GSuite MDM ",
@@ -117,7 +114,7 @@
         "product": "x"
     },
     {
-        "safeguardsConsiderations": "Infrastracture Security",
+        "safeguardsConsiderations": "Infrastructure Security",
         "controls": "Install an endpoint protection solution.",
         "details": "Most attacks start with user devices (workstations/end-points) -e.g., malware, phishing, ransomware, etc. Such attacks can be prevented by installing an endpoint protection solution which monitors system activities in real time and prevents/blocks exploits and malware. Tool examples: Windows Defender, MalwareBytes, Sophos, CarbonBlack Defense, Endgame.",
         "suggestedTools": "Windows Defender, MalwareBytes, Sophos, CarbonBlack Defense, Endgame",
