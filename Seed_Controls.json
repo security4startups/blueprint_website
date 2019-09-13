@@ -1,5 +1,4 @@
-[
-    {
+[{
         "safeguardsConsiderations": "Categories"
     },
     {
@@ -70,7 +69,7 @@
         "safeguardsConsiderations": "Identity and Access Management",
         "controls": "Define on-boarding and off-boarding of users - e.g., what accounts are created or terminated upon hire/termination, what default priviledges are assigned for users, etc.",
         "details": "A checklist based user access provisioning, access termination and user access review processes are key to making sure that only authorized users have access to company information systems.\n\n",
-        "reference": "Awesome Onboarding 92bondstreet - https:
+        "reference": "Awesome Onboarding 92bondstreet - https:",
         "risks": "All ",
         "corporate": "x",
         "productInfrastructure": "x"
