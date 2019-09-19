@@ -66,7 +66,7 @@
         "safeguardsConsiderations": "Identity and Access Management",
         "controls": "Define on-boarding and off-boarding of users - e.g., what accounts are created or terminated upon hire/termination, what default priviledges are assigned for users, etc.",
         "details": "A checklist based user access provisioning, access termination and user access review processes are key to making sure that only authorized users have access to company information systems.\n\n",
-        "reference": "Awesome Onboarding 92bondstreet - https:",
+        "reference": "Awesome Onboarding 92bondstreet - https://github.com/92bondstreet/awesome-onboarding",
         "risks": "All ",
         "corporate": "x",
         "productInfrastructure": "x"
@@ -265,7 +265,8 @@
     {
         "safeguardsConsiderations": "Application Security",
         "controls": "Adopt and deploy Secure Development Lifecycle",
-        "details": "It is important to establish a Software Development Lifecycle (SDLC) which incorporates security and privacy, early on. This could be as simple as having security and privacy reviews as a section in any of the tech specs or product requirement Documents. \nSDLC Framework Options:\nOpenSAMM: https://www.opensamm.org/\nBSIMM: https://www.bsimm.com/framework.html\nOWASP: https://www.owasp.org/index.php/OWASP_Secure_Software_Development_Lifecycle_Project\nMicrosoft: https://www.microsoft.com/en-us/securityengineering/sdl/practices\n\n",
+        "details": "It is important to establish a Software Development Lifecycle (SDLC) which incorporates security and privacy, early on. This could be as simple as having security and privacy reviews as a section in any of the tech specs or product requirement Documents.", 
+        "reference": \nSDLC Framework Options:\nOpenSAMM: https://www.opensamm.org/\nBSIMM: https://www.bsimm.com/framework.html\nOWASP: https://www.owasp.org/index.php/OWASP_Secure_Software_Development_Lifecycle_Project\nMicrosoft: https://www.microsoft.com/en-us/securityengineering/sdl/practices\n\n or sample extensive SDLC process",
         "risks": "Data Breach, Compliance, failure to deliver service, Integrity failures",
         "productInfrastructure": "x",
         "product": "x",
