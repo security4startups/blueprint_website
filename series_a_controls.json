@@ -1,8 +1,4 @@
-[
-    {
-        "safeguardsConsiderations": "Categories"
-    },
-    {
+[{
         "safeguardsConsiderations": "Identity and Access Management",
         "controls": "Establish system / environment owners and a process to control access to information, systems, and data.",
         "details": "As the organization grows its technical footprint, it is important to assign owners to systems and environments who can be responsible for controlling access to the assets. Especially where access to confidential data / systems is involved, having an owner review the access request prior to approval will enforce good access practices and drive accountability of decisions (e.g. ownership assigned as tags in AWS assets).",
@@ -34,7 +30,7 @@
         "controls": "Leverage your cloud provider's built-in configuration security scanner.",
         "details": "Cloud providers offer built-in services that can identify insecure configurations such as exposed resources. For example, AWS Trusted Advisor is a solution for automatically checking cloud infrastructure configurations against established benchmarks such as Center for Internet Security (CIS). Set up alerting and regularly review reports for insecure configurations. Address findings on a timely basis based on severity.",
         "suggestedTools": "AWS Trusted Advisor",
-        "reference": "https:
+        "reference": "https:",
         "risk": "Data breach, loss of system availability, execution and delivery failure, compliance deficiency, compliance failure, reflection attacks defacement of public site, tampering with content, modification of customer records",
         "productInfrastructure": "x"
     },
