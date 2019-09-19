@@ -266,7 +266,7 @@
         "safeguardsConsiderations": "Application Security",
         "controls": "Adopt and deploy Secure Development Lifecycle",
         "details": "It is important to establish a Software Development Lifecycle (SDLC) which incorporates security and privacy, early on. This could be as simple as having security and privacy reviews as a section in any of the tech specs or product requirement Documents.", 
-        "reference": \nSDLC Framework Options:\nOpenSAMM: https://www.opensamm.org/\nBSIMM: https://www.bsimm.com/framework.html\nOWASP: https://www.owasp.org/index.php/OWASP_Secure_Software_Development_Lifecycle_Project\nMicrosoft: https://www.microsoft.com/en-us/securityengineering/sdl/practices\n\n or sample extensive SDLC process",
+        "reference": "\nSDLC Framework Options:\nOpenSAMM: https://www.opensamm.org/\nBSIMM: https://www.bsimm.com/framework.html\nOWASP: https://www.owasp.org/index.php/OWASP_Secure_Software_Development_Lifecycle_Project\nMicrosoft: https://www.microsoft.com/en-us/securityengineering/sdl/practices\n\n or sample extensive SDLC process",
         "risks": "Data Breach, Compliance, failure to deliver service, Integrity failures",
         "productInfrastructure": "x",
         "product": "x",
