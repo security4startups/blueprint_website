@@ -38,7 +38,8 @@
         "safeguardsConsiderations": "Infrastructure Security",
         "controls": "Adopt best practices from cloud provider reference architectures.",
         "details": "Cloud providers offering PaaS services have built reference architectures that can be leveraged as security best practices for architecting cloud environments. Following such standards will help ensure fundamentally strong designs from a security, quality and reliability perspective.",
-        "reference": "https://aws.amazon.com/whitepapers/aws-security-best-practices/\nhttps://docs.microsoft.com/en-us/azure/security/security-best-practices-and-patterns\nhttps://cloud.google.com/docs/enterprise/best-practices-for-enterprise-organizations"
+        "reference": "https://aws.amazon.com/whitepapers/aws-security-best-practices/\nhttps://docs.microsoft.com/en-us/azure/security/security-best-practices-and-patterns\nhttps://cloud.google.com/docs/enterprise/best-practices-for-enterprise-organizations",
+        "productInfrastructure": "x"
     },
     {
         "safeguardsConsiderations": "Governance",
