@@ -1,5 +1,4 @@
-[
-  {
+[{
     "safeguardsConsiderations": "Identity and Access Management",
     "controls": "Establish system / environment owners and a process to control access to information, systems, and data.",
     "details": "As the organization grows its technical footprint, it is important to assign owners to systems and environments who can be responsible for controlling access to the assets. Especially where access to confidential data / systems is involved, having an owner review the access request prior to approval will enforce good access practices and drive accountability of decisions (e.g. ownership assigned as tags in AWS assets).",
@@ -63,7 +62,7 @@
     "safeguardsConsiderations": "Application Security",
     "controls": "Perform security assessments as part of product development.",
     "details": "New and existing features should be tested for security vulnerabilities, both at the application level and the infrastructure supporting the feature. Depending on the severity of the vulnerability, require remediation prior to release.",
-    "reference": "http://security4startup.herokuapp.com/app-security",
+    "reference": "http://security4startup.com/app-security",
     "risk": "Data breach, loss of system availability, execution and delivery failure, compliance deficiency, compliance failure, reflection attacks defacement of public site, tampering with content, modification of customer records",
     "productInfrastructure": "x",
     "product": "x"
