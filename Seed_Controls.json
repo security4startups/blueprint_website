@@ -4,7 +4,7 @@
     "details": "To prevent unauthorized access to laptops, servers, and mobile devices, companies should protect devices by requiring passwords or passcodes after a reasonable period of inactivity.",
     "suggestedTools": "AirWatch, JAMF (Mac), Active Directory GPOs, Office365 (E1 plans & higher), GSuite MDM ",
     "risks": "All ",
-    "corporate": "xs",
+    "corporate": "x",
     "productInfrastructure": "x",
     "product": "x"
   },
