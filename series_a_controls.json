@@ -114,7 +114,7 @@
   {
     "safeguardsConsiderations": "Governance",
     "controls": "Perform basic security, privacy and compliance awareness and training with employees, including general security practices at the minimum.",
-    "details": "All employees must be made aware of basic security and privacy obligations, including but not limited to things like locking screens, encrypting equipment, passcode on cell phones, keeping OS updated on devices, installing anti-virus, physical security of laptops, mobile phones, using strong passwords. These basic hygiene measures are easy to complete but also very easy to forget and may end up resulting in irreparable damage from loss of data / trust. Consider online training modules, for e.g. Infosec Institute, ataata.com",
+    "details": "All employees must be made aware of basic security and privacy obligations, including but not limited to things like locking screens, encrypting equipment, passcode on cell phones, keeping OS updated on devices, installing anti-virus, physical security of laptops, mobile phones, using strong passwords. These basic hygiene measures are easy to complete but also very easy to forget and may end up resulting in irreparable damage from loss of data / trust.",
     "suggestedTools": "Infosec Institute, http://www.ataata.com",
     "corporate": "x"
   },
