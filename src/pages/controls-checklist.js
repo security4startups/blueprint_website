@@ -11,7 +11,6 @@ import { PDFDownloadLink } from "@react-pdf/renderer"
 import PdfDocument from "../components/ControlPdf"
 // import { generateExcel } from "../../data/exportToCsv"
 import message from "antd/lib/message"
-import Sidebar from "react-sidebar"
 
 export default class ControlChecklist extends Component {
   state = {
@@ -90,7 +89,6 @@ export default class ControlChecklist extends Component {
         })
 
         const itemhtml = secitems.map((item, index) => {
-          console.log(item.reference)
           const controlDetail = `
                   ${this.urlify(item.details)}
                   ${
