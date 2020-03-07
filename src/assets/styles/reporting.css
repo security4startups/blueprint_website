@@ -1,0 +1,91 @@
+.reporting {
+    padding-left: 130px !important
+}
+
+.reporting .content-box {
+    font-size: 0.8em;
+    border: 2px solid #D8D8D8;
+    border-radius: 3px;
+    background: #D8D8D8;
+    box-shadow: 5px 5px 5px #D8D8D8;
+    margin-bottom: 2em;
+    font-weight: 500;
+    cursor: pointer;
+    opacity: 0.8;
+    padding: 2em;
+    background: white;
+}
+
+.reporting .content {
+    border-bottom: 0.1em solid white;
+    color: #4A4A4C;
+    padding: 0.5em 2em 0.5em 1em;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: #F8F4D7;
+    cursor: pointer
+}
+
+.reporting .content:hover {
+    text-decoration: underline
+}
+
+
+.reporting .content:nth-child(2n+1) {
+    background: #FDFCF5
+}
+
+.reporting .reporting-item .content-box>.content:hover {
+    text-decoration: none !important
+}
+
+.reporting .reporting-item .content-box .answer,
+.reporting .reporting-item .content-box .question {
+    font-weight: 700;
+    margin-right: 0.3em;
+}
+
+.reporting .reporting-item .content-box .answer {
+    margin-right: 1em;
+}
+
+.reporting-item .content-box div {
+    background: #FDFCF5
+}
+
+.reporting-item .content-box div:nth-child(2n+1) {
+    background: #F8F4D7;
+}
+
+.reporting .far {
+    font-size: 2.9em;
+    position: absolute;
+    margin-left: -2em;
+}
+
+.visual-link {
+    font-size: 1.5em !important;
+    color: #096479 !important;
+    margin-top: 1em !important;
+    position: absolute !important;
+}
+
+.reporting .graph-container {
+    height: 450px
+}
+
+.reporting .legends {
+    font-size: 0.8em;
+}
+
+.reporting .legends {
+    display: flex;
+    flex-wrap: wrap;
+    color: black
+}
+
+.reporting .legends>div {
+    margin-right: 1em
+}

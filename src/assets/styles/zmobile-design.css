@@ -1,0 +1,183 @@
+.mobile-nav {
+    background: #F4F5F7;
+    text-align: center;
+    padding: 0;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 9;
+}
+
+.mobile-nav .colla {
+    padding: 0 !important;
+    margin-bottom: 0
+}
+
+.mobile-nav .colla {
+    transition: max-height 0.15s ease-out;
+    max-height: 0;
+    overflow: hidden
+}
+
+.mobile-nav .colla.show {
+    max-height: 999px
+}
+
+.mobile-nav img {
+    width: 45px;
+    height: 45px;
+    margin-right: 1em;
+}
+
+.mobile-nav .brand-logo {
+    font-size: 1.6em
+}
+
+.mobile-nav .brand-logo>span {
+    display: block;
+    font-family: "Avenir Next LT Pro Regular" !important;
+    font-size: 0.55em;
+    margin-top: -0.4em;
+}
+
+.mobile-nav .nav-link.active {
+    font-weight: bold
+}
+
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 9;
+    transition: margin ease-in;
+    margin-right: 0
+}
+
+.sidebar-mar {
+    margin-right: 100% !important
+}
+
+#sidebar-collapse {
+    display: none;
+    font-size: 1.5em;
+    position: fixed;
+    right: 25px;
+    cursor: pointer;
+    top: 22px;
+    z-index: 999;
+}
+
+.mobile-nav a,
+.mobile-nav ul li {
+    color: #6DB8BB !important;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.1em
+}
+
+.mobile-nav ul li {
+    border-top: 1px solid darkgray
+}
+
+
+.mobile-nav ul li a {
+    padding: 0 !important
+}
+
+
+.mobile-nav ul li,
+.mobile-nav>div:first-child {
+    padding: 0.9em 1.8em
+}
+
+.mobile-nav a:hover {
+    text-decoration: none
+}
+
+.mobile-nav ul li {
+    list-style-type: none
+}
+
+
+.control-btn-group {
+    display: none !important
+}
+
+
+@media (max-width:768px) {
+    .sm-d-none {
+        display: none
+    }
+
+    .sm-d-block {
+        display: block !important
+    }
+
+
+    #sidebar-collapse {
+        display: block !important
+    }
+
+    .page-content {
+        padding-top: 100px !important;
+        padding-right: 20px !important;
+        padding-left: 20px !important;
+    }
+
+    .survey-page .risk-input {
+        width: 100%
+    }
+
+    .survey-page .risk-profile .row>div:first-child,
+    .survey-page .risk-profile .row>div:nth-child(2),
+    .survey-page .risk-profile .row>div.offset-md-6 {
+        padding-left: 3px !important;
+        padding-right: 3px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .checkmark {
+        left: 20px !important
+    }
+
+    .survey-table th {
+        font-size: 0.8em !important
+    }
+
+    .survey-page .table-main {
+        font-size: 0.9em
+    }
+
+    .control-para {
+        font-size: 1.1em
+    }
+
+    .large-paragraph:last-child {
+        font-size: 1.2em
+    }
+
+    .control-btn-group {
+        display: block !important
+    }
+
+    .control-btn-group button {
+        width: 33%;
+        font-size: 1.2em !important;
+        background-color: #D8D8D8;
+        border: none;
+        outline: none;
+        font-weight: bold;
+        height: 60px;
+        border: 1px solid gray
+    }
+
+    .paragraph-container {
+        padding: 0em 2.3em !important
+    }
+
+
+}

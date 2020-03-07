@@ -1,0 +1,221 @@
+@font-face {
+  font-family: "bebas_kairegular";
+  src: url("/fonts/bebaskai-webfont.woff2") format("woff2"),
+    url("/fonts/bebaskai-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next LT Pro Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/AvenirNextLTPro-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Avenir Next LT Pro Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/AvenirNextLTPro-Bold.woff") format("woff");
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Avenir Next LT Pro Regular" !important;
+  color: #096479;
+  font-size: 1rem !important;
+}
+
+.page-content {
+  height: 100%;
+  padding: 0 60px;
+  padding-right: 130px;
+  padding-bottom: 130px;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  padding: 27px 60px !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 1em !important;
+}
+
+.navbar .nav-content {
+  margin-top: 2em;
+}
+
+.navbar .brand img {
+  display: block;
+  width: 190px;
+}
+
+.navbar .brand a {
+  display: block;
+  color: #116679;
+  text-decoration: none;
+  margin-top: -0.5em;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.navbar .nav-link.active {
+  font-family: "Avenir Next LT Pro Bold" !important;
+}
+
+.brand-logo {
+  font-size: 50px;
+  color: #096479;
+  font-family: "Avenir Next LT Pro Bold" !important;
+}
+
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 1em;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #6db8bb;
+  font-size: 20px;
+}
+
+.page-content .categories,
+.page-content .control-input,
+.page-content .control-export {
+  padding-left: 1.5em;
+}
+
+/* page-content */
+.page-content h2 {
+  color: #096479;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.page-content p {
+  color: #4a4a4a;
+}
+
+.page-content ul {
+  color: #4a4a4a;
+  padding-left: 20px;
+  margin-left: 0.8em;
+}
+
+.page-content li {
+  margin-bottom: 1rem;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+}
+
+.categories>a {
+  font-size: 15px;
+  margin-bottom: 0.9em;
+  color: black;
+}
+
+.categories>a:hover {
+  text-decoration: none;
+  color: #6db8bb;
+}
+
+.categories-detail>h2,
+.categories>h2,
+.control-export>h2,
+.control-input>h2:first-child {
+  color: #116679;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.categories>h2,
+.control-export>h2,
+.control-input>h2:first-child,
+.control-page .left-section h2:first-child {
+  font-size: 21px;
+  margin-top: 10px;
+}
+
+.control-page .left-section>h2:first-child {
+  font-weight: bold;
+  padding-left: 1.5em;
+}
+
+.control-export>h2,
+.control-input>h2:first-child {
+  font-size: 17px;
+}
+
+
+
+.categories>img {
+  width: 160px;
+  margin: auto;
+  margin-bottom: 4em;
+}
+
+.blue-action-btn {
+  background-color: #6db8bb;
+  padding: 10px 30px !important;
+  border-radius: 15px;
+  font-size: 25px !important;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0px 3px 5px grey !important;
+  margin-top: 25px !important;
+  outline: none;
+}
+
+
+.blue-action-btn a {
+  color: white !important
+}
+
+.page-content .left-section {
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+}
+
+.ant-select-selection {
+  background: none !important;
+  border: none !important;
+  width: 100%
+}
+
+.collpasible {
+  transition: max-height 0.35s ease-in;
+  max-height: 1000px;
+  overflow: hidden;
+}
+
+.collpasible.collapsed {
+  max-height: 0;
+}
+
+
+
+
+#sidebar>div>div:first-child {
+  width: 270px;
+  padding: 2em 0.4em;
+  z-index: 99 !important;
+}
+
+

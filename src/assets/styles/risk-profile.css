@@ -1,0 +1,257 @@
+.survey-page {
+    color: black;
+}
+
+.survey-page .main-heading {
+    font-family: "Avenir Next LT Pro Regular";
+    color: #116679;
+    font-size: 35px;
+    margin-bottom: .7em;
+    font-weight: bold
+}
+
+.survey-secondary-heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: gray !important
+}
+
+.survey-page .categories-detail>p:first-child,
+.survey-page .categories-detail>ul:nth-child(2) {
+    font-size: 1.2em
+}
+
+.survey-page .risk-input {
+    border: none;
+    background: #eeeeee;
+    /* padding: 5px 5px 5px 10px; */
+    margin-bottom: 1.4rem;
+    margin-top: 7px;
+    width: 378px;
+}
+
+.survey-page .radio-box {
+    margin-bottom: 1rem;
+}
+
+.survey-page .radio-box .radio-box-item {
+    padding-left: 2rem;
+}
+
+
+
+.survey-page #radio-heading {
+    padding-left: 2rem;
+}
+
+.survey-page table {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.survey-page table tbody {
+    background-color: #eeeeee;
+}
+
+.survey-page tbody>tr {
+    border-bottom: 2px solid white;
+
+
+}
+
+.survey-page .table-main {
+
+    padding: 1rem;
+    text-align: start;
+    color: gray;
+    font-weight: bold
+}
+
+.survey-page .empty-box {
+    width: 100%;
+    height: 100px;
+    background-color: #eeeeee;
+
+}
+
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 45px;
+    height: 20px;
+    width: 20px;
+    background-color: #f9fafc;
+    border-radius: 50%;
+    border: 0.5px solid #e4e4e4;
+}
+
+.first-table-radio {
+    left: 50px;
+}
+
+.radio-box-input {
+    left: 0;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+    top: 5px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+
+.survey-page .risk-profile .row>div:first-child {
+    padding-right: 3px;
+}
+
+.survey-page .risk-profile .row>div:nth-child(2) {
+    padding-left: 3px;
+}
+
+.survey-page .risk-profile .row>div.offset-md-6 {
+    padding-left: 3px;
+}
+
+.survey-page .risk-profile .final-answer:last-child>div {
+    padding-right: 14px;
+}
+
+.risk-profile .question {
+    font-weight: bold;
+    font-size: 23px;
+    background-color: #eeeeee;
+    padding: 0.5em;
+    font-family: "Avenir Next LT Pro Bold" !important
+}
+
+.question-heading {
+    margin: 0;
+}
+
+.columns {
+    margin-bottom: 1em;
+    padding: 0 2px;
+
+}
+
+
+.risk-profile .question1 {
+    background-color: #eeeeee;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+.risk-profile .question1-heading {
+    font-family: "Avenir Next LT Pro Bold" !important;
+    font-size: 18px;
+}
+
+.risk-profile .question-box-label {
+    color: black;
+    font-size: 15px;
+    margin-bottom: 5px;
+    padding-left: 2.9em;
+}
+
+.risk-profile .answer {
+    padding: 10px;
+    background-color: #eeeeee;
+    height: 100%;
+}
+
+.risk-profile .answer>p {
+    margin: 0;
+}
+
+.topics {
+    margin: 1em 0;
+    margin-bottom: 3em;
+}
+
+.topics>div p.placeholder {
+    height: 56px;
+}
+
+
+.topics>div p,
+.topics>div p.placeholder,
+.sortable-chosen {
+    background: #eeee !important;
+    padding: 1em 1em !important;
+    margin-bottom: 5px !important;
+    cursor: pointer !important;
+    /* width: 300px; */
+    list-style-type: none
+}
+
+
+
+.risk-heading {
+    clear: both;
+}
+
+.survey-table th {
+    color: gray
+}
+
+.survey-page .final-matter {
+    font-size: 1.3em;
+    text-align: center;
+    width: 80%;
+    margin: auto !important;
+    font-weight: bold;
+    padding: 1em;
+}

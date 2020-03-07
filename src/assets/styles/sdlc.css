@@ -1,0 +1,72 @@
+.sdlc-page ol {
+    padding-left: 1em;
+    color: #4a4a4a;
+}
+
+.breadcrumbs {
+    width: 100%;
+    margin-left: 0.7em;
+}
+
+.breadcrumbs .col-md-2 {
+    display: flex;
+    justify-content: center;
+    align-content: center
+}
+
+
+.breadcrumb-title {
+    height: 40px;
+    text-align: center;
+    padding-left: 24px;
+    background: #D8D8D8;
+    color: white;
+    position: relative;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+
+
+.breadcrumb-title:before {
+    content: '';
+    width: 28.2px;
+    height: 28.2px;
+    display: inline-block;
+    position: absolute;
+    background: white;
+    left: -14px;
+    top: 6px;
+    transform: rotate(45deg);
+}
+
+.breadcrumb-title:after {
+    content: '';
+    width: 28.2px;
+    height: 28.2px;
+    display: inline-block;
+    position: absolute;
+    background: #D8D8D8;
+    right: -14px;
+    top: 6px;
+    transform: rotate(45deg);
+    z-index: 3;
+}
+
+.breadcrumb-text {
+    border: 1px solid black;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    font-size: 12px;
+}
+
+.breadcrumb-text>ul>li {
+    margin: 0;
+}
+
+.sdlc-page .categories-detail>h2:first-child {
+    font-family: "Avenir Next LT Pro Bold" !important
+}

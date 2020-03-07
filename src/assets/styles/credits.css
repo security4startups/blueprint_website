@@ -1,0 +1,75 @@
+.credit-page.page-content {
+    padding: 0 60px;
+}
+
+.credit-page .owners {
+    width: 18.8%;
+    text-align: center;
+    margin-bottom: 0.9em;
+    min-width: 140px
+}
+
+.credit-page .owners a {
+    color: unset !important
+}
+
+.credit-page .owners a:hover {
+    text-decoration: none
+}
+
+
+
+.credit-page .row {
+    padding: 15px;
+    justify-content: space-evenly;
+}
+
+.credit-page .owners img {
+    width: 100%
+}
+
+.credit-page .owners .owners-detail {
+    width: 80%;
+    margin: auto;
+    margin-top: 7px;
+}
+
+.credit-page .owners .owners-detail p {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 7px
+}
+
+
+/* .credit-page .owners-card {
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+/* .credit-page .owners {
+    width: 225px;
+    margin-right: 13px;
+    margin-bottom: 8px;
+}
+
+.credit-page .owners-detail {
+    width: 225px;
+}
+
+.credit-page .owners-detail>span {
+
+    display: block;
+    text-align: center;
+    color: #707073;
+}
+
+.credit-page .owners-img {
+    height: 225px;
+}
+
+.credit-page .name {
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+} */

@@ -1,0 +1,72 @@
+/* .appsecurity .table-content {
+    margin-left: 5em;
+    margin-bottom: 1rem;
+}
+
+.appsecurity table {
+    height: 100%;
+}
+
+.appsecurity tr>td {
+    background-color: #D8D8D8;
+    border: 3px solid white;
+    color: #4C4B4A;
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+.appsecurity tr>th {
+    text-align: center;
+    font-size: 13px;
+    color: #4A4A4C;
+}
+
+.appsecurity .table-main {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 4px 12px;
+}
+
+.appsecurity .main-heading {
+    color: #116679;
+    font-weight: bold;
+    margin-bottom: 1em;
+    margin-top: 1em
+} */
+.appsec .control-content.paragraph-container {
+    align-items: flex-start
+}
+
+.appsec .control-content.paragraph-container h4 {
+    font-weight: bold;
+    color: #ACACAA !important;
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-size: 1.5em
+}
+
+.appsec .control-content.paragraph-container ul {
+    font-size: 18px;
+    color: #ACACAA !important;
+}
+
+.appsec .control-content.paragraph-container ul li {
+    margin-bottom: 0.3rem;
+}
+
+
+.appsec .control-content.crossed+.control-content li,
+.appsec .control-content.crossed+.control-content h4 {
+    text-decoration: line-through;
+    text-decoration-color: red
+}
+
+.appsec .generalDesign li {
+    font-weight: bold
+}
+
+.appsec .generalDesign li p {
+    font-weight: normal;
+    color: #ACACAA !important;
+
+}
