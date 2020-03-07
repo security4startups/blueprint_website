@@ -26,6 +26,7 @@ export default class AppSecurity extends Component {
     securityTopics: [],
     riskAssessment: [],
     sidebarOpen: false,
+    isMobile: false,
   }
 
   changeSelect(val, name) {
@@ -109,10 +110,15 @@ export default class AppSecurity extends Component {
       behavior: "smooth",
     })
   }
+  componentDidMount() {
+    if (window.innerWidth <= 760) {
+      this.setState({ isMobile: true })
+    }
+  }
   render() {
     const sidebarContent = (
       <div className="categories">
-        {window.innerWidth <= 760 ? <img src="/img/logo.png" alt="" /> : ""}
+        {this.state.isMobile ? <img src="/img/logo.png" alt="" /> : ""}
 
         <h2> Categories </h2>
         <a href="#survey" onClick={this.smoothScroll.bind(this)}>

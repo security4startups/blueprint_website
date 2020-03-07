@@ -12,6 +12,7 @@ export default class AppSecurity extends Component {
   state = {
     sidebarOpen: false,
     securityData: [],
+    isMobile: false,
   }
   onSetSidebarOpen(open) {
     this.setState({ sidebarOpen: open })
@@ -19,6 +20,7 @@ export default class AppSecurity extends Component {
 
   componentWillMount() {
     var self = this
+
     // Meteor.call("getAppSecurity", (err, res) => {
     //   self.setState({
     //     securityData: res,
@@ -26,6 +28,11 @@ export default class AppSecurity extends Component {
     // })
   }
 
+  componentDidMount() {
+    if (window.innerWidth <= 760) {
+      this.setState({ isMobile: true })
+    }
+  }
   renderControls() {
     var controlsData = []
 
@@ -119,7 +126,7 @@ export default class AppSecurity extends Component {
   render() {
     const sidebarContent = (
       <div className="categories">
-        {window.innerWidth <= 760 ? <img src="/img/logo.webp" alt="" /> : ""}
+        {this.state.isMobile ? <img src="/img/logo.webp" alt="" /> : ""}
         <h2>Categories</h2>
         <a href="#GeneralDesignPrinciplesforSecureSoftwareDevelopment">
           General Design Principles for Secure Software Development

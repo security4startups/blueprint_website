@@ -28,12 +28,18 @@ export default class ControlChecklist extends Component {
     checked: [],
     pdfClicked: false,
     sidebarOpen: false,
+    isMobile: false,
   }
 
   controlsdata = ""
 
   onSetSidebarOpen(open) {
     this.setState({ sidebarOpen: open })
+  }
+  componentDidMount() {
+    if (window.innerWidth <= 760) {
+      this.setState({ isMobile: true })
+    }
   }
   componentWillMount() {
     var self = this
@@ -276,7 +282,7 @@ export default class ControlChecklist extends Component {
   render() {
     const sidebarContent = (
       <div className="categories">
-        {window.innerWidth <= 760 ? <img src="/img/logo.png" alt="" /> : ""}
+        {this.state.isMobile ? <img src="/img/logo.png" alt="" /> : ""}
         <h2>Selection menu</h2>
         <div class="control-input">
           <h2>Stage</h2>

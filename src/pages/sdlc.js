@@ -11,6 +11,7 @@ import axios from "axios"
 export default class AppSecurity extends Component {
   state = {
     sidebarOpen: false,
+    isMobile: false,
   }
   onSetSidebarOpen(open) {
     this.setState({ sidebarOpen: open })
@@ -21,10 +22,15 @@ export default class AppSecurity extends Component {
       behavior: "smooth",
     })
   }
+  componentDidMount() {
+    if (window.innerWidth <= 760) {
+      this.setState({ isMobile: true })
+    }
+  }
   render() {
     const sidebarContent = (
       <div className="categories">
-        {window.innerWidth <= 760 ? <img src="/img/logo.png" alt="" /> : ""}
+        {this.state.isMobile ? <img src="/img/logo.png" alt="" /> : ""}
         <h2>Categories</h2>
         <a href="#purpose" onClick={this.smoothScroll.bind(this)}>
           Purpose

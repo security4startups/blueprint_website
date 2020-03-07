@@ -9,6 +9,7 @@ import Sidebar from "react-sidebar"
 export default class index extends Component {
   state = {
     sidebarOpen: false,
+    isMobile: false,
   }
 
   onSetSidebarOpen(open) {
@@ -22,10 +23,16 @@ export default class index extends Component {
     })
   }
 
+  componentDidMount() {
+    if (window.innerWidth <= 760) {
+      this.setState({ isMobile: true })
+    }
+  }
+
   render() {
     const sidebarContent = (
       <div className="categories">
-        {window.innerWidth <= 760 ? <img src="/img/logo.webp" alt="" /> : ""}
+        {this.state.isMobile ? <img src="/img/logo.webp" alt="" /> : ""}
         <h2> Navigation </h2>
         <a href="#about" onClick={this.smoothScroll.bind(this)}>
           {" "}
