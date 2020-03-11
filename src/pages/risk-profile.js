@@ -10,7 +10,7 @@ import axios from "axios"
 import RiskProfile from "../components/RiskProfile"
 import EnvAsses from "../components/EnvAsses"
 import SecurityTopic from "../components/SecurityTopic"
-
+import { navigate } from "gatsby"
 export default class AppSecurity extends Component {
   state = {
     formSubmit: false,
@@ -92,16 +92,15 @@ export default class AppSecurity extends Component {
         delete tempState.formSubmit
         delete tempState.sidebarOpen
 
-        // Meteor.call("addRisk", tempState, (err, res) => {})
+        axios.post("http://localhost:3000/riskprofile", { data: tempState })
       }
     )
 
     this.setState({
       formSubmit: true,
     })
-    var self = this
     setTimeout(() => {
-      self.props.history.push("/controls-checklist")
+      navigate("/controls-checklist")
     }, 1000)
   }
 

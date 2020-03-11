@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@react-pdf/renderer": "^1.6.4",
+    "antd": "^3.22.2",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "gatsby": "^2.19.7",
@@ -23,9 +25,7 @@
     "react-sidebar": "^3.0.2",
     "react-sortablejs": "^1.5.1",
     "smoothscroll-polyfill": "^0.4.4",
-    "sortablejs": "^1.9.0",
-    "@react-pdf/renderer": "^1.6.4",
-    "antd": "^3.22.2"
+    "sortablejs": "^1.9.0"
   },
   "devDependencies": {
     "prettier": "^1.19.1"

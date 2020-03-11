@@ -11,7 +11,6 @@ import { PDFDownloadLink } from "@react-pdf/renderer"
 import PdfDocument from "../components/ControlPdf"
 // import { generateExcel } from "../../data/exportToCsv"
 import message from "antd/lib/message"
-
 export default class ControlChecklist extends Component {
   state = {
     data: [],
@@ -43,12 +42,14 @@ export default class ControlChecklist extends Component {
   }
   componentWillMount() {
     var self = this
-    // Meteor.call("getData", (err, res) => {
-    //   self.setState({
-    //     seed: res[0],
-    //     seriesa: res[1],
-    //   })
-    // })
+    // https://security4startup.herokuapp.com/controls
+    axios.get("http://localhost:3000/controls").then(res => {
+      const data = res.data
+      self.setState({
+        seed: data[0],
+        seriesa: data[1],
+      })
+    })
   }
 
   urlify(text) {
@@ -434,7 +435,7 @@ export default class ControlChecklist extends Component {
     )
     return (
       <Layout>
-        <SEO title="SDLC" />
+        <SEO title="Controls" />
 
         <div class="page-content control-page">
           <div class="row">
