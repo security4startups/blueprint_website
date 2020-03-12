@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
+import "antd/dist/antd.css" // or 'antd/dist/antd.less'
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "../assets/styles/appSecurity.css"
@@ -19,12 +19,14 @@ import "../assets/styles/sdlc.css"
 import "../assets/styles/style.css"
 import "../assets/styles/zmobile-design.css"
 import Navigation from "./Navigation"
+import Redirect from "./Redirect"
 
 const Layout = ({ children }) => {
   return (
     <div className="body-wrapper">
       <Navigation />
       <main>{children}</main>
+      <Redirect />
     </div>
   )
 }
