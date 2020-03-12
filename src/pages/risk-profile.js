@@ -92,7 +92,9 @@ export default class AppSecurity extends Component {
         delete tempState.formSubmit
         delete tempState.sidebarOpen
 
-        axios.post("http://localhost:3000/riskprofile", { data: tempState })
+        axios.post("https://security4startup.herokuapp.com/riskprofile", {
+          data: tempState,
+        })
       }
     )
 
