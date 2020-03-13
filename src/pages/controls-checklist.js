@@ -42,7 +42,7 @@ export default class ControlChecklist extends Component {
   componentWillMount() {
     var self = this
     // https://security4startup.herokuapp.com/controls
-    axios.get("http://localhost:3000/controls").then(res => {
+    axios.get("https://security4startup.herokuapp.com/controls").then(res => {
       console.log(res.data)
       const data = res.data
       self.setState({
