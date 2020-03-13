@@ -9,7 +9,7 @@ import Sidebar from "react-sidebar"
 import axios from "axios"
 import { PDFDownloadLink } from "@react-pdf/renderer"
 import PdfDocument from "../components/ControlPdf"
-// import { generateExcel } from "../../data/exportToCsv"
+// import { generateExcel } from "../utils/exportToCsv"
 import message from "antd/lib/message"
 export default class ControlChecklist extends Component {
   state = {
@@ -27,7 +27,6 @@ export default class ControlChecklist extends Component {
     checked: [],
     pdfClicked: false,
     sidebarOpen: false,
-    isMobile: false,
   }
 
   controlsdata = ""
@@ -43,7 +42,8 @@ export default class ControlChecklist extends Component {
   componentWillMount() {
     var self = this
     // https://security4startup.herokuapp.com/controls
-    axios.get("https://security4startup.herokuapp.com/controls").then(res => {
+    axios.get("http://localhost:3000/controls").then(res => {
+      console.log(res.data)
       const data = res.data
       self.setState({
         seed: data[0],
@@ -55,7 +55,6 @@ export default class ControlChecklist extends Component {
   urlify(text) {
     var urlRegex = /(https?:\/\/[^\s]+)/g
     return text.replace(urlRegex, function(url) {
-      console.log(url)
       return '<a href="' + url + '" target="_blank">' + url + "</a>"
     })
   }
@@ -278,7 +277,42 @@ export default class ControlChecklist extends Component {
   }
 
   CsvExport() {
-    // generateExcel(this.state)
+    console.log(this.state)
+    const expdata = this.state
+    var exportedFilenmae =
+      "Security Controls" + ".xlsx" || "Security Controls.xlsx"
+
+    axios
+      .post("http://localhost:3000/exportCSV", {
+        data: expdata,
+        responseType: "arraybuffer",
+      })
+      .then(res => {
+        // var blob = new Blob([res.data], {
+        //   type:
+        //     "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        // })
+
+        var blob = Buffer.from(res.data, "binary").toString("base64")
+        console.log(blob)
+        if (window.navigator.msSaveBlob) {
+          // IE 10+
+          window.navigator.msSaveBlob(blob, exportedFilenmae)
+        } else {
+          var link = document.createElement("a")
+          if (link.download !== undefined) {
+            // feature detection
+            // Browsers that support HTML5 download attribute
+            // var url = URL.createObjectURL(blob)
+            link.setAttribute("href", blob)
+            link.setAttribute("download", exportedFilenmae)
+            link.style.visibility = "hidden"
+            document.body.appendChild(link)
+            link.click()
+            document.body.removeChild(link)
+          }
+        }
+      })
   }
   render() {
     const sidebarContent = (
