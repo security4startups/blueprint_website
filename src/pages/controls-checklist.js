@@ -11,6 +11,8 @@ import { PDFDownloadLink } from "@react-pdf/renderer"
 import PdfDocument from "../components/ControlPdf"
 // import { generateExcel } from "../utils/exportToCsv"
 import message from "antd/lib/message"
+var fileDownload = require("js-file-download")
+
 export default class ControlChecklist extends Component {
   state = {
     data: [],
@@ -279,38 +281,20 @@ export default class ControlChecklist extends Component {
   CsvExport() {
     console.log(this.state)
     const expdata = this.state
-    var exportedFilenmae = "Security Controls.xlsx"
+    var exportedFilenmae = "SecurityControls.xlsx"
 
     axios
       .post("https://security4startup.herokuapp.com/exportCSV", {
         data: expdata,
-        responseType: "blob",
       })
       .then(res => {
-        console.log(res.data)
-        var blob = new Blob([res.data], {
-          type:
-            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-        })
-        console.log(blob)
-        if (window.navigator.msSaveBlob) {
-          // IE 10+
-          window.navigator.msSaveBlob(blob, exportedFilenmae)
-        } else {
-          var link = document.createElement("a")
-          if (link.download !== undefined) {
-            // feature detection
-            // Browsers that support HTML5 download attribute
-            var url = URL.createObjectURL(blob)
-            console.log(url)
-            link.setAttribute("href", url)
-            link.setAttribute("download", exportedFilenmae)
-            link.style.visibility = "hidden"
-            document.body.appendChild(link)
-            link.click()
-            document.body.removeChild(link)
-          }
-        }
+        var link = document.createElement("a")
+        const linkSource = `data:application/pdf;base64,${res.data}`
+        const fileName = "SecurityControls.xlsx"
+        link.href = linkSource
+        link.download = exportedFilenmae
+        link.click()
+        console.log(link)
       })
   }
   render() {
