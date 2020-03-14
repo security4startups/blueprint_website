@@ -279,21 +279,19 @@ export default class ControlChecklist extends Component {
   CsvExport() {
     console.log(this.state)
     const expdata = this.state
-    var exportedFilenmae =
-      "Security Controls" + ".xlsx" || "Security Controls.xlsx"
+    var exportedFilenmae = "Security Controls.xlsx"
 
     axios
-      .post("http://localhost:3000/exportCSV", {
+      .post("https://security4startup.herokuapp.com/exportCSV", {
         data: expdata,
-        responseType: "arraybuffer",
+        responseType: "blob",
       })
       .then(res => {
-        // var blob = new Blob([res.data], {
-        //   type:
-        //     "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-        // })
-
-        var blob = Buffer.from(res.data, "binary").toString("base64")
+        console.log(res.data)
+        var blob = new Blob([res.data], {
+          type:
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        })
         console.log(blob)
         if (window.navigator.msSaveBlob) {
           // IE 10+
@@ -303,8 +301,9 @@ export default class ControlChecklist extends Component {
           if (link.download !== undefined) {
             // feature detection
             // Browsers that support HTML5 download attribute
-            // var url = URL.createObjectURL(blob)
-            link.setAttribute("href", blob)
+            var url = URL.createObjectURL(blob)
+            console.log(url)
+            link.setAttribute("href", url)
             link.setAttribute("download", exportedFilenmae)
             link.style.visibility = "hidden"
             document.body.appendChild(link)
