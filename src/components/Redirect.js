@@ -6,17 +6,11 @@ export default class Redirect extends Component {
       window.location.href = "https://www.security4startups.com"
       return
     }
-    if (
-      window.location.href.includes("https://www.security4startups.com/SDLC")
-    ) {
+    if (window.location.href.includes("/SDLC")) {
       window.location.href = "https://www.security4startups.com/sdlc"
       return
     }
-    if (
-      window.location.href.includes(
-        "https://www.security4startups.com/app-security"
-      )
-    ) {
+    if (window.location.href.includes("/app-security")) {
       window.location.href = "https://www.security4startups.com/app_security"
       return
     }
