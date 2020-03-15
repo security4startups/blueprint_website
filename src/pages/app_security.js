@@ -128,6 +128,7 @@ export default class AppSecurity extends Component {
     return controlsData
   }
   render() {
+    // change
     const sidebarContent = (
       <div className="categories">
         {this.state.isMobile ? <img src="/img/logo.webp" alt="" /> : ""}
