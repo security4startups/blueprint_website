@@ -130,7 +130,18 @@ export default class ControlChecklist extends Component {
 
           return (
             <>
-              <div class="control-content">
+              <div
+                class="control-content"
+                onClick={e => {
+                  const domitem = e.target
+
+                  $(domitem).toggleClass("clicked")
+
+                  $(domitem)
+                    .next(".control-content")
+                    .toggleClass("collapsed")
+                }}
+              >
                 <i
                   class="fas fa-check "
                   onClick={e => {

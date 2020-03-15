@@ -5,3 +5,9 @@
  */
 
 // You can delete this file if you're not using it
+import React, { Component } from "react"
+
+import Redirect from "./src/components/Redirect"
+export const wrapRootElement = ({ element }) => {
+  return <Redirect>{element}</Redirect>
+}

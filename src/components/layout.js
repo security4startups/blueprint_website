@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
     <div className="body-wrapper">
       <Navigation />
       <main>{children}</main>
-      <Redirect />
+      {/* <Redirect /> */}
     </div>
   )
 }
