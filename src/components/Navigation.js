@@ -1,6 +1,7 @@
 import React from "react"
 import NavItem from "./NavItem"
 import { Link } from "gatsby"
+import logo from "../assets/images/s4slogo.png"
 class Navigation extends React.Component {
   state = {
     hideNav: false,
@@ -70,7 +71,7 @@ class Navigation extends React.Component {
               className="d-flex text-left"
               onClick={this.collapseClicked.bind(this)}
             >
-              <img src="/img/s4slogo.png" alt="" />
+              <img src={logo} alt="" />
               <span class="brand-logo">
                 Security4Startups
                 <span>
@@ -101,7 +102,7 @@ class Navigation extends React.Component {
         ) : (
           <nav class="navbar">
             <div class="brand">
-              <img src="/img/s4slogo.png" alt="" />
+              <img src={logo} alt="" />
               <span class="brand-logo">Security4Startups</span>
               <a href="https://www.ggvc.com/" target="_blank">
                 POWERED BY <strong>GGV</strong>CAPITAL
