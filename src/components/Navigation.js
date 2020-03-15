@@ -70,7 +70,7 @@ class Navigation extends React.Component {
               className="d-flex text-left"
               onClick={this.collapseClicked.bind(this)}
             >
-              <img src="/img/logo.webp" alt="" />
+              <img src="/img/s4slogo.png" alt="" />
               <span class="brand-logo">
                 Security4Startups
                 <span>
@@ -101,7 +101,7 @@ class Navigation extends React.Component {
         ) : (
           <nav class="navbar">
             <div class="brand">
-              <img src="/img/logo.webp" alt="" />
+              <img src="/img/s4slogo.png" alt="" />
               <span class="brand-logo">Security4Startups</span>
               <a href="https://www.ggvc.com/" target="_blank">
                 POWERED BY <strong>GGV</strong>CAPITAL
