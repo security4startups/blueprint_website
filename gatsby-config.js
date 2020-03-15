@@ -1,7 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: `Security4Startup`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Security4Startups`,
+    description: `The Security 4 Startups (“S4S”) was designed by a working group
+    of investors and small, mid, and large-corporation CISOs. Its
+    purpose is to empower startups with reasonable security controls
+    that are intelligently applied and have a favorable cost-effect
+    ratio. Simply put: S4S strives to help early stage startups
+    solve for their greatest security risks, in a balanced way, and
+    in a manner that’s sustainable and doesn’t demand great security
+    expertise. While S4S will not solve every security
+    vulnerability, it provides a solid baseline addressing the most
+    common and important security challenges companies face and will
+    provide a solid starting point from which companies can grow
+    their security program.`,
     author: `vjhameed`,
   },
   plugins: [
