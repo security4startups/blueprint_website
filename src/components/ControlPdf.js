@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from "react"
 import {
   Page,
   Text,
@@ -6,12 +6,12 @@ import {
   Document,
   StyleSheet,
   Image,
-  Font
-} from "@react-pdf/renderer";
+  Font,
+} from "@react-pdf/renderer"
 
 const styles = StyleSheet.create({
   page: {
-    backgroundColor: "#ffffff"
+    backgroundColor: "#ffffff",
   },
   sectionHeading: {
     color: "#116679",
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     marginTop: 15,
     fontSize: 20,
     fontWeight: "bold",
-    marginLeft: 20
+    marginLeft: 20,
   },
   controlContent: {
     margin: 10,
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#F6F6F6",
     display: "flex",
     flexDirection: "column",
-    cursor: "pointer"
+    cursor: "pointer",
   },
   controlPara: {
     fontSize: 14,
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     color: "#ACACAA",
     padding: 8,
     paddingLeft: 0,
-    marginLeft: 10
+    marginLeft: 10,
   },
   controlDetail: {
     backgroundColor: "#F6F6F6",
@@ -46,82 +46,80 @@ const styles = StyleSheet.create({
     cursor: "pointer",
     flexDirection: "column",
     padding: 10,
-    alignItems: "flex-start"
+    alignItems: "flex-start",
   },
   controlDetailPara: {
     marginBottom: 15,
     fontSize: 12,
-    color: "#ACACAA "
+    color: "#ACACAA ",
   },
   controlDetailRef: {
     fontWeight: "bold",
     color: "#4a4a4a",
-    fontSize: 10
+    fontSize: 10,
   },
   fontBold: {
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
   brandImage: {
     width: 150,
     marginLeft: 30,
-    marginTop: 20
+    marginTop: 20,
   },
   brand: {
     fontSize: 23,
     color: "#116679",
     marginLeft: 30,
     marginTop: 8,
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
   poweredby: {
     fontSize: 10,
     color: "#116679",
     marginLeft: 30,
     marginTop: 0,
-    marginBottom: 20
-  }
-});
+    marginBottom: 20,
+  },
+})
 
 export default class controlPdf extends Component {
   renderControls() {
-    const { seed, seriesa, crossed, checked } = this.props.data;
+    const { seed, seriesa, crossed, checked } = this.props.data
     if (seed.length > 0 || seriesa.length > 0) {
-      var data = [];
-      const { seedcontrol, seriesacontrol } = this.props.data;
-      if (seedcontrol) data = [...seed];
-      if (seriesacontrol) data = [...data, ...seriesa];
+      var data = []
+      const { seedcontrol, seriesacontrol } = this.props.data
+      if (seedcontrol) data = [...seed]
+      if (seriesacontrol) data = [...data, ...seriesa]
 
-      const sections = [...new Set(data.map(x => x.safeguardsConsiderations))];
+      const sections = [...new Set(data.map(x => x.safeguardsConsiderations))]
 
-      let controlsdata = [];
+      let controlsdata = []
       sections.map((sec, secindex) => {
-        var secitems = data.filter(
-          item => item.safeguardsConsiderations == sec
-        );
+        var secitems = data.filter(item => item.safeguardsConsiderations == sec)
 
         secitems = secitems.filter(item => {
-          var condition = false;
+          var condition = false
           var cond1,
             cond2,
-            cond3 = false;
+            cond3 = false
 
-          const { corporate, product, productInfrastructure } = this.props.data;
+          const { corporate, product, productInfrastructure } = this.props.data
           if (corporate)
-            if ("undefined" === typeof item["corporate"]) cond1 = false;
-            else cond1 = true;
+            if ("undefined" === typeof item["corporate"]) cond1 = false
+            else cond1 = true
           if (product)
-            if ("undefined" === typeof item["product"]) cond2 = false;
-            else cond2 = true;
+            if ("undefined" === typeof item["product"]) cond2 = false
+            else cond2 = true
 
           if (productInfrastructure)
             if ("undefined" === typeof item["productInfrastructure"])
-              cond3 = false;
-            else cond3 = true;
+              cond3 = false
+            else cond3 = true
 
-          if (cond1 || cond2 || cond3) condition = true;
-          else condition = false;
-          return condition;
-        });
+          if (cond1 || cond2 || cond3) condition = true
+          else condition = false
+          return condition
+        })
 
         const itemhtml = secitems.map((item, index) => {
           if (!crossed.includes(item.id))
@@ -147,7 +145,7 @@ export default class controlPdf extends Component {
                     ) : null}
                   </View>
                 </View>
-              );
+              )
             else
               return (
                 <View key={index} style={styles.controlContent} wrap={false}>
@@ -157,7 +155,7 @@ export default class controlPdf extends Component {
                     <Text style={styles.controlDetailPara}>{item.details}</Text>
                     {item.suggestedTools ? (
                       <Text style={styles.controlDetailRef}>
-                        Tool examples: {item.suggestedTools}{" "}
+                        Suggested Tools: {item.suggestedTools}{" "}
                       </Text>
                     ) : null}
                     {item.reference ? (
@@ -167,8 +165,8 @@ export default class controlPdf extends Component {
                     ) : null}
                   </View>
                 </View>
-              );
-        });
+              )
+        })
 
         const secitem =
           secindex === 0 ? (
@@ -179,14 +177,14 @@ export default class controlPdf extends Component {
             <View break>
               <Text style={styles.sectionHeading}>{sec}</Text>
             </View>
-          );
+          )
 
-        let sectemparray = [secitem];
-        sectemparray = [...sectemparray, ...itemhtml];
-        controlsdata.push(sectemparray);
-      });
+        let sectemparray = [secitem]
+        sectemparray = [...sectemparray, ...itemhtml]
+        controlsdata.push(sectemparray)
+      })
 
-      return controlsdata;
+      return controlsdata
     }
   }
 
@@ -202,6 +200,6 @@ export default class controlPdf extends Component {
           {this.renderControls()}
         </Page>
       </Document>
-    );
+    )
   }
 }

@@ -102,7 +102,7 @@ export default class ControlChecklist extends Component {
                   ${
                     item.suggestedTools
                       ? `<p style='font-weight:bold;margin-top:18px' className="mt-3">
-                        Tool examples: ${item.suggestedTools}
+                        Suggested Tools: ${item.suggestedTools}
                       </p>`
                       : ""
                   }
@@ -409,37 +409,12 @@ export default class ControlChecklist extends Component {
         <div class="control-export mt-4">
           <h2>Export</h2>
           <div class="export-icon">
-            {this.state.pdfClicked ? (
-              <PDFDownloadLink
-                document={<PdfDocument data={this.state} />}
-                fileName="Security4Startups Controls.pdf"
-              >
-                <img src="/img/adobereadericon.png" alt="" />
-              </PDFDownloadLink>
-            ) : (
-              <img
-                src="/img/adobereadericon.png"
-                onClick={() => {
-                  message.success("generating pdf")
-                  setTimeout(() => {
-                    message.success(
-                      "Pdf Generated. Please click the button again"
-                    )
-                  }, 500)
-
-                  this.setState({
-                    pdfClicked: true,
-                  })
-                  const self = this
-                  setTimeout(() => {
-                    self.setState({
-                      pdfClicked: false,
-                    })
-                  }, 30000)
-                }}
-                alt=""
-              />
-            )}
+            <PDFDownloadLink
+              document={<PdfDocument data={this.state} />}
+              fileName="Security4Startups Controls.pdf"
+            >
+              <img src="/img/adobereadericon.png" alt="" />
+            </PDFDownloadLink>
 
             <img
               src="/img/excelicon.png"
