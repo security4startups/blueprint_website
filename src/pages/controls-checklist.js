@@ -29,6 +29,7 @@ export default class ControlChecklist extends Component {
     checked: [],
     pdfClicked: false,
     sidebarOpen: false,
+    pdfLink: null,
   }
 
   controlsdata = ""
@@ -52,6 +53,18 @@ export default class ControlChecklist extends Component {
         seriesa: data[1],
       })
     })
+  }
+  componentDidMount() {
+    const pdflink = (
+      <PDFDownloadLink
+        document={<PdfDocument data={this.state} />}
+        fileName="Security4Startups Controls.pdf"
+      >
+        <img src="/img/adobereadericon.png" alt="" />
+      </PDFDownloadLink>
+    )
+
+    this.setState({ pdfLink: pdflink })
   }
 
   urlify(text) {
@@ -409,13 +422,7 @@ export default class ControlChecklist extends Component {
         <div class="control-export mt-4">
           <h2>Export</h2>
           <div class="export-icon">
-            <PDFDownloadLink
-              document={<PdfDocument data={this.state} />}
-              fileName="Security4Startups Controls.pdf"
-            >
-              <img src="/img/adobereadericon.png" alt="" />
-            </PDFDownloadLink>
-
+            {this.state.pdfLink}
             <img
               src="/img/excelicon.png"
               onClick={this.CsvExport.bind(this)}
