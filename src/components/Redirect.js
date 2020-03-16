@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-
+import { navigate } from "gatsby"
 export default class Redirect extends Component {
   componentDidMount() {
     if (!window.location.href.includes("https://www.security4startups.com")) {
@@ -7,11 +7,11 @@ export default class Redirect extends Component {
       return
     }
     if (window.location.href.includes("/SDLC")) {
-      window.location.href = "https://www.security4startups.com/sdlc"
+      navigate("/sdlc")
       return
     }
     if (window.location.href.includes("/app-security")) {
-      window.location.href = "https://www.security4startups.com/app_security"
+      navigate("/app_security")
       return
     }
   }
