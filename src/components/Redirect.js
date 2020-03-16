@@ -6,14 +6,14 @@ export default class Redirect extends Component {
       window.location.href = "https://www.security4startups.com"
       return
     }
-    if (window.location.href.includes("/SDLC")) {
-      navigate("/sdlc")
-      return
-    }
-    if (window.location.href.includes("/app-security")) {
-      navigate("/app_security")
-      return
-    }
+    // if (window.location.href.includes("/SDLC")) {
+    //   navigate("/sdlc")
+    //   return
+    // }
+    // if (window.location.href.includes("/app-security")) {
+    //   navigate("/app_security")
+    //   return
+    // }
   }
 
   render() {

@@ -73,7 +73,6 @@ export default class AppSecurity extends Component {
     return (
       <Layout>
         <SEO title="SDLC" />
-        {/* changed */}
         <div class="page-content sdlc-page">
           <div class="row">
             <div
