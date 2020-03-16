@@ -7,6 +7,7 @@ import React, { Component } from "react"
 import $ from "jquery"
 import Sidebar from "react-sidebar"
 import axios from "axios"
+import logo from "../assets/images/s4slogo.png"
 
 export default class AppSecurity extends Component {
   state = {
@@ -30,7 +31,7 @@ export default class AppSecurity extends Component {
   render() {
     const sidebarContent = (
       <div className="categories">
-        {this.state.isMobile ? <img src="/img/logo.png" alt="" /> : ""}
+        {this.state.isMobile ? <img src={logo} alt="" /> : ""}
         <h2>Categories</h2>
         <a href="#purpose" onClick={this.smoothScroll.bind(this)}>
           Purpose

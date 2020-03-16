@@ -11,6 +11,8 @@ import RiskProfile from "../components/RiskProfile"
 import EnvAsses from "../components/EnvAsses"
 import SecurityTopic from "../components/SecurityTopic"
 import { navigate } from "gatsby"
+import logo from "../assets/images/s4slogo.png"
+
 export default class AppSecurity extends Component {
   state = {
     formSubmit: false,
@@ -119,7 +121,7 @@ export default class AppSecurity extends Component {
   render() {
     const sidebarContent = (
       <div className="categories">
-        {this.state.isMobile ? <img src="/img/logo.png" alt="" /> : ""}
+        {this.state.isMobile ? <img src={logo} alt="" /> : ""}
 
         <h2> Categories </h2>
         <a href="#survey" onClick={this.smoothScroll.bind(this)}>

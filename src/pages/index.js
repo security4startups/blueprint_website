@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 
 import React, { Component } from "react"
 import Sidebar from "react-sidebar"
+import logo from "../assets/images/s4slogo.png"
 
 export default class index extends Component {
   state = {
@@ -32,7 +33,7 @@ export default class index extends Component {
   render() {
     const sidebarContent = (
       <div className="categories">
-        {this.state.isMobile ? <img src="/img/logo.webp" alt="" /> : ""}
+        {this.state.isMobile ? <img src={logo} alt="" /> : ""}
         <h2> Navigation </h2>
         <a href="#about" onClick={this.smoothScroll.bind(this)}>
           {" "}

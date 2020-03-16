@@ -9,6 +9,7 @@ import Sidebar from "react-sidebar"
 import axios from "axios"
 import { PDFDownloadLink } from "@react-pdf/renderer"
 import PdfDocument from "../components/ControlPdf"
+import logo from "../assets/images/s4slogo.png"
 // import { generateExcel } from "../utils/exportToCsv"
 import message from "antd/lib/message"
 var fileDownload = require("js-file-download")
@@ -324,7 +325,7 @@ export default class ControlChecklist extends Component {
   render() {
     const sidebarContent = (
       <div className="categories">
-        {this.state.isMobile ? <img src="/img/logo.png" alt="" /> : ""}
+        {this.state.isMobile ? <img src={logo} alt="" /> : ""}
         <h2>Selection menu</h2>
         <div class="control-input">
           <h2>Stage</h2>

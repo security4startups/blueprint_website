@@ -18,6 +18,7 @@ import mikeImage from "../assets/images/mike.png"
 import oddyImage from "../assets/images/ody.png"
 import jonImage from "../assets/images/jonathan.png"
 import amberImage from "../assets/images/amber.png"
+import logo from "../assets/images/s4slogo.png"
 
 export default class Credits extends Component {
   render() {
