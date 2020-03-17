@@ -30,7 +30,7 @@ export default class ControlChecklist extends Component {
     checked: [],
     pdfClicked: false,
     sidebarOpen: false,
-    pdfLink: null,
+    pdflink: null,
   }
 
   controlsdata = ""
@@ -43,18 +43,42 @@ export default class ControlChecklist extends Component {
       this.setState({ isMobile: true })
     }
   }
+
+  createPdfLink() {
+    let pdflink = (
+      <PDFDownloadLink
+        document={<PdfDocument data={this.state} />}
+        fileName="Security4Startups Controls.pdf"
+      >
+        <img src="/img/adobereadericon.png" alt="" />
+      </PDFDownloadLink>
+    )
+
+    this.setState({ pdflink: pdflink })
+  }
+
+  componentDidMount() {
+    this.createPdfLink()
+  }
+
   componentWillMount() {
     var self = this
     // https://security4startup.herokuapp.com/controls
     axios.get("https://security4startup.herokuapp.com/controls").then(res => {
       console.log(res.data)
       const data = res.data
-      self.setState({
-        seed: data[0],
-        seriesa: data[1],
-      })
+      self.setState(
+        {
+          seed: data[0],
+          seriesa: data[1],
+        },
+        () => {
+          this.createPdfLink()
+        }
+      )
     })
   }
+
   urlify(text) {
     var urlRegex = /(https?:\/\/[^\s]+)/g
     return text.replace(urlRegex, function(url) {
@@ -274,6 +298,7 @@ export default class ControlChecklist extends Component {
         }))
       }
     }, 100)
+    this.createPdfLink()
   }
 
   toggleCrossed(id) {
@@ -288,6 +313,8 @@ export default class ControlChecklist extends Component {
           crossed: prevState.crossed.filter(ite => ite !== id),
         }))
     }, 100)
+
+    this.createPdfLink()
   }
 
   CsvExport() {
@@ -309,22 +336,14 @@ export default class ControlChecklist extends Component {
         console.log(link)
       })
   }
+
   render() {
-    let pdflink = (
-      <PDFDownloadLink
-        document={<PdfDocument data={this.state} />}
-        fileName="Security4Startups Controls.pdf"
-      >
-        <img src="/img/adobereadericon.png" alt="" />
-      </PDFDownloadLink>
-    )
     const sidebarContent = (
       <div className="categories">
         {this.state.isMobile ? <img src={logo} alt="" /> : ""}
         <h2>Selection menu</h2>
         <div class="control-input">
           <h2>Stage</h2>
-
           <label class="control-label">
             Seed{" "}
             <input
@@ -429,7 +448,7 @@ export default class ControlChecklist extends Component {
         <div class="control-export mt-4">
           <h2>Export</h2>
           <div class="export-icon">
-            {pdflink}
+            {this.state.pdflink}
             <img
               src="/img/excelicon.png"
               onClick={this.CsvExport.bind(this)}
