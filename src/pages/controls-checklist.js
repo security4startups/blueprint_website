@@ -73,7 +73,7 @@ export default class ControlChecklist extends Component {
           seriesa: data[1],
         },
         () => {
-          this.createPdfLink()
+          // this.createPdfLink()
         }
       )
     })
