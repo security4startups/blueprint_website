@@ -189,6 +189,7 @@ export default class controlPdf extends Component {
   }
 
   render() {
+    console.log(this.props)
     return (
       <Document>
         <Page size="A4" style={styles.page} wrap>

@@ -55,19 +55,6 @@ export default class ControlChecklist extends Component {
       })
     })
   }
-  componentDidMount() {
-    const pdflink = (
-      <PDFDownloadLink
-        document={<PdfDocument data={this.state} />}
-        fileName="Security4Startups Controls.pdf"
-      >
-        <img src="/img/adobereadericon.png" alt="" />
-      </PDFDownloadLink>
-    )
-
-    this.setState({ pdfLink: pdflink })
-  }
-
   urlify(text) {
     var urlRegex = /(https?:\/\/[^\s]+)/g
     return text.replace(urlRegex, function(url) {
@@ -323,6 +310,14 @@ export default class ControlChecklist extends Component {
       })
   }
   render() {
+    let pdflink = (
+      <PDFDownloadLink
+        document={<PdfDocument data={this.state} />}
+        fileName="Security4Startups Controls.pdf"
+      >
+        <img src="/img/adobereadericon.png" alt="" />
+      </PDFDownloadLink>
+    )
     const sidebarContent = (
       <div className="categories">
         {this.state.isMobile ? <img src={logo} alt="" /> : ""}
@@ -434,7 +429,7 @@ export default class ControlChecklist extends Component {
         <div class="control-export mt-4">
           <h2>Export</h2>
           <div class="export-icon">
-            {this.state.pdfLink}
+            {pdflink}
             <img
               src="/img/excelicon.png"
               onClick={this.CsvExport.bind(this)}
@@ -444,6 +439,7 @@ export default class ControlChecklist extends Component {
         </div>
       </div>
     )
+
     return (
       <Layout>
         <SEO title="Controls" />
