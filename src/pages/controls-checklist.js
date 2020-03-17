@@ -44,22 +44,22 @@ export default class ControlChecklist extends Component {
     }
   }
 
-  createPdfLink() {
-    let pdflink = (
-      <PDFDownloadLink
-        document={<PdfDocument data={this.state} />}
-        fileName="Security4Startups Controls.pdf"
-      >
-        <img src="/img/adobereadericon.png" alt="" />
-      </PDFDownloadLink>
-    )
+  // createPdfLink() {
+  //   let pdflink = (
+  //     <PDFDownloadLink
+  //       document={<PdfDocument data={this.state} />}
+  //       fileName="Security4Startups Controls.pdf"
+  //     >
+  //       <img src="/img/adobereadericon.png" alt="" />
+  //     </PDFDownloadLink>
+  //   )
 
-    this.setState({ pdflink: pdflink })
-  }
+  //   this.setState({ pdflink: pdflink })
+  // }
 
-  componentDidMount() {
-    this.createPdfLink()
-  }
+  // componentDidMount() {
+  //   this.createPdfLink()
+  // }
 
   componentWillMount() {
     var self = this
@@ -294,7 +294,7 @@ export default class ControlChecklist extends Component {
             checked: [...prevState.checked, id],
           }),
           () => {
-            this.createPdfLink()
+            // this.createPdfLink()
           }
         )
       else {
@@ -303,7 +303,7 @@ export default class ControlChecklist extends Component {
             checked: prevState.checked.filter(ite => ite !== id),
           }),
           () => {
-            this.createPdfLink()
+            // this.createPdfLink()
           }
         )
       }
@@ -319,7 +319,7 @@ export default class ControlChecklist extends Component {
             crossed: [...prevState.crossed, id],
           }),
           () => {
-            this.createPdfLink()
+            // this.createPdfLink()
           }
         )
       else
@@ -328,7 +328,7 @@ export default class ControlChecklist extends Component {
             crossed: prevState.crossed.filter(ite => ite !== id),
           }),
           () => {
-            this.createPdfLink()
+            // this.createPdfLink()
           }
         )
     }, 100)
@@ -345,6 +345,7 @@ export default class ControlChecklist extends Component {
       })
       .then(res => {
         var link = document.createElement("a")
+        console.log(res.data)
         const linkSource = `data:application/pdf;base64,${res.data}`
         const fileName = "SecurityControls.xlsx"
         link.href = linkSource
@@ -465,7 +466,37 @@ export default class ControlChecklist extends Component {
         <div class="control-export mt-4">
           <h2>Export</h2>
           <div class="export-icon">
-            {this.state.pdflink}
+            {this.state.pdfClicked ? (
+              <PDFDownloadLink
+                document={<PdfDocument data={this.state} />}
+                fileName="Security4Startups Controls.pdf"
+              >
+                <img src="/img/adobereadericon.png" alt="" />
+              </PDFDownloadLink>
+            ) : (
+              <img
+                src="/img/adobereadericon.png"
+                onClick={() => {
+                  message.success("generating pdf")
+                  setTimeout(() => {
+                    message.success(
+                      "Pdf Generated. Please click the button again"
+                    )
+                  }, 500)
+
+                  this.setState({
+                    pdfClicked: true,
+                  })
+                  const self = this
+                  setTimeout(() => {
+                    self.setState({
+                      pdfClicked: false,
+                    })
+                  }, 30000)
+                }}
+                alt=""
+              />
+            )}{" "}
             <img
               src="/img/excelicon.png"
               onClick={this.CsvExport.bind(this)}
