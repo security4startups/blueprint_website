@@ -289,32 +289,49 @@ export default class ControlChecklist extends Component {
     const self = this
     setTimeout(() => {
       if (!self.state.checked.includes(id))
-        self.setState(prevState => ({
-          checked: [...prevState.checked, id],
-        }))
+        self.setState(
+          prevState => ({
+            checked: [...prevState.checked, id],
+          }),
+          () => {
+            this.createPdfLink()
+          }
+        )
       else {
-        self.setState(prevState => ({
-          checked: prevState.checked.filter(ite => ite !== id),
-        }))
+        self.setState(
+          prevState => ({
+            checked: prevState.checked.filter(ite => ite !== id),
+          }),
+          () => {
+            this.createPdfLink()
+          }
+        )
       }
     }, 100)
-    this.createPdfLink()
   }
 
   toggleCrossed(id) {
     const self = this
     setTimeout(() => {
       if (!self.state.crossed.includes(id))
-        self.setState(prevState => ({
-          crossed: [...prevState.crossed, id],
-        }))
+        self.setState(
+          prevState => ({
+            crossed: [...prevState.crossed, id],
+          }),
+          () => {
+            this.createPdfLink()
+          }
+        )
       else
-        self.setState(prevState => ({
-          crossed: prevState.crossed.filter(ite => ite !== id),
-        }))
+        self.setState(
+          prevState => ({
+            crossed: prevState.crossed.filter(ite => ite !== id),
+          }),
+          () => {
+            this.createPdfLink()
+          }
+        )
     }, 100)
-
-    this.createPdfLink()
   }
 
   CsvExport() {
