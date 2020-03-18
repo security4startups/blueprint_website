@@ -1,135 +1,130 @@
-.control-page .categories-detail>.main-heading:first-child {
-    font-family: "Avenir Next LT Pro Bold" !important;
-    font-size: 35px
+.control-page .categories-detail > .main-heading:first-child {
+  font-family: "Avenir Next LT Pro Bold" !important;
+  font-size: 35px;
 }
 
-.control-page .categories-detail>h4:nth-child(2) {
-    font-weight: bold;
-    color: #116679
+.control-page .categories-detail > h4:nth-child(2) {
+  font-weight: bold;
+  color: #116679;
 }
 
 .control-content {
-    font-size: 14px;
-    background: #F6F6F6;
-    padding: 0.5em 1em;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    margin-bottom: 0.1em;
+  font-size: 14px;
+  background: #f6f6f6;
+  padding: 0.5em 1em;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 0.1em;
 }
 
 .control-content:hover {
-    background-color: #FFFFFF;
+  background-color: #ffffff;
 }
-
-
 
 .control-para {
-    font-size: 20px;
-    margin: 0 23px;
-    line-height: 1.2;
-    color: #ACACAA;
-    padding: 0.5em;
-
+  font-size: 20px;
+  margin: 0 23px;
+  line-height: 1.2;
+  color: #acacaa;
+  padding: 0.5em;
 }
 
-
 .paragraph-container {
-    flex-direction: column;
-    padding: 0em 4.7em !important;
-    align-items: flex-start;
+  flex-direction: column;
+  padding: 0em 4.7em !important;
+  align-items: flex-start;
 }
 
 .paragraph-container p,
 .paragraph-container a,
 .paragraph-container span {
-    word-break: break-word
+  word-break: break-word;
 }
 
 .large-paragraph {
-    font-size: 18px;
-    color: #ACACAA !important;
+  font-size: 18px;
+  color: #acacaa !important;
 }
 
 .large-paragraph:first-child {
-    margin-top: 1em
+  margin-top: 1em;
 }
 
 .large-paragraph:last-child {
-    margin-bottom: 1em
+  margin-bottom: 1em;
 }
 
-
 .control-page .click {
-    font-size: 14px;
-    background: white;
-    padding: 0.5em 1em;
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    margin-bottom: 0.1em;
+  font-size: 14px;
+  background: white;
+  padding: 0.5em 1em;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 0.1em;
 }
 
 .control-page .control-content .fa-times {
-    background-color: #A8AAB7;
-    color: white;
-    font-size: 15px;
-    padding: 2px 4px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    position: absolute;
-    right: 25px;
+  background-color: #a8aab7;
+  color: white;
+  font-size: 15px;
+  padding: 2px 4px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: absolute;
+  right: 25px;
 }
 
-
-
-
 .control-page .control-content:hover .fa-times {
-    /* color: #CBCCD3; */
-    /* font-size: 12px; */
-    /* background-color: #FFFFFF; */
+  /* color: #CBCCD3; */
+  /* font-size: 12px; */
+  /* background-color: #FFFFFF; */
 }
 
 .control-page .control-content:hover .fa-check {
-    background-color: #A8AAB7;
-    color: white;
-    padding: 4px;
+  background-color: #a8aab7;
+  color: white;
+  padding: 4px;
 }
 
 .control-page .control-content .fa-check {
-    color: #CBCCD3;
-    font-size: 12px;
-    padding: 4px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+  color: #cbccd3;
+  font-size: 12px;
+  padding: 4px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
-
 .control-page .control-content.click .fa-check {
-    background-color: #A8AAB7;
-    color: white;
-    font-size: 12px;
-    padding: 4px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+  background-color: #a8aab7;
+  color: white;
+  font-size: 12px;
+  padding: 4px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .control-page .control-content .fa-check.checked {
-    background-color: #01795a;
-    color: white
+  background-color: #01795a;
+  color: white;
+}
+
+.control-page .control-content .fa-check.checked + .control-para {
+  font-weight: bold;
 }
 
 .control-page .control-content.click .fa-times {
-    /* background-color: unset;
+  /* background-color: unset;
     color: #CBCCD3;
     font-size: 12px;
     padding: 4px;
@@ -141,187 +136,179 @@
 }
 
 .completed {
-    width: 75%;
-    background-color: #6DB8BB;
+  width: 75%;
+  background-color: #6db8bb;
 }
 
 /* Create a custom radio button */
 .control-page .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: whitesmoke;
-    border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: whitesmoke;
+  border-radius: 50%;
 }
 
 .seed {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .control-page .control-content.crossed .control-para {
-    text-decoration: line-through;
-    text-decoration-color: red
+  text-decoration: line-through;
+  text-decoration-color: red;
 }
 
-.control-page .control-content.crossed+.control-content .large-paragraph {
-    text-decoration: line-through;
-    text-decoration-color: red
+.control-page .control-content.crossed + .control-content .large-paragraph {
+  text-decoration: line-through;
+  text-decoration-color: red;
 }
-
 
 .control-content {
-    font-size: 14px;
-    background: #F6F6F6;
-    padding: 0.5em 1em;
-    display: flex;
-    align-items: center;
+  font-size: 14px;
+  background: #f6f6f6;
+  padding: 0.5em 1em;
+  display: flex;
+  align-items: center;
 
-    margin-bottom: 0.1em;
+  margin-bottom: 0.1em;
 }
 
 .control-content:hover {
-    background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .control-check {
-    color: #CBCCD3;
-    font-size: 12px;
-    padding: 4px;
+  color: #cbccd3;
+  font-size: 12px;
+  padding: 4px;
 }
 
 .control-content:hover .control-check {
-    background-color: #A8AAB7;
-    color: white;
-    font-size: 12px;
-    padding: 4px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+  background-color: #a8aab7;
+  color: white;
+  font-size: 12px;
+  padding: 4px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
-
 .control-cross {
-    background-color: #A8AAB7;
-    color: white;
-    font-size: 12px;
-    padding: 2px 4px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    position: absolute;
-    right: 25px;
+  background-color: #a8aab7;
+  color: white;
+  font-size: 12px;
+  padding: 2px 4px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: absolute;
+  right: 25px;
 }
 
 .control-content:hover .control-cross {
-    color: #CBCCD3;
-    font-size: 12px;
-    background-color: #FFFFFF;
-    padding: 4px;
-    border-radius: 50%;
-
+  color: #cbccd3;
+  font-size: 12px;
+  background-color: #ffffff;
+  padding: 4px;
+  border-radius: 50%;
 }
 
-
 .control-input {
-    padding: 1em 0;
-    border-bottom: 1px solid #ACACAA;
+  padding: 1em 0;
+  border-bottom: 1px solid #acacaa;
 }
 
 /* Customize the label (the container) */
 .control-input .control-label {
-    display: block;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    padding-left: 40px;
-    margin-bottom: 2px;
-    cursor: pointer;
-    font-size: 18px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    color: #ACACAA;
+  display: block;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  padding-left: 40px;
+  margin-bottom: 2px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #acacaa;
 }
 
 /* Hide the browser's default checkbox */
 .control-input .control-label input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
 /* Create a custom checkbox */
 .control-input .control-input-box {
-    position: absolute;
-    top: 3px;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    background-color: #eee;
-    border-radius: 25%;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 25%;
 }
 
 /* On mouse-over, add a grey background color */
-.control-input .control-label:hover input~.control-input-box {
-    background-color: #ccc;
+.control-input .control-label:hover input ~ .control-input-box {
+  background-color: #ccc;
 }
-
-
 
 /* Create the checkmark/indicator (hidden when not checked) */
 .control-input .control-input-box:after {
-    content: "";
-    position: absolute;
-    display: none;
+  content: "";
+  position: absolute;
+  display: none;
 }
 
 /* Show the checkmark when checked */
-.control-input .control-label input:checked~.control-input-box:after {
-    display: block;
+.control-input .control-label input:checked ~ .control-input-box:after {
+  display: block;
 }
 
-.control-input .control-label input:checked~.control-input-box {
-    background-color: #01795a;
-
+.control-input .control-label input:checked ~ .control-input-box {
+  background-color: #01795a;
 }
-
 
 /* Style the checkmark/indicator */
 .control-input .control-label .control-input-box:after {
-    left: 7px;
-    top: 4px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
+  left: 7px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
 }
 
 .export-icon {
-    margin: 0 3em;
+  margin: 0 3em;
 }
 
-.control-export>.export-icon img {
-    width: 25px;
-    height: 25px;
-    margin-right: 1em;
-    cursor: pointer;
+.control-export > .export-icon img {
+  width: 25px;
+  height: 25px;
+  margin-right: 1em;
+  cursor: pointer;
 }
 
 .expand-controls {
-    cursor: pointer;
-    font-weight: bold
+  cursor: pointer;
+  font-weight: bold;
 }
