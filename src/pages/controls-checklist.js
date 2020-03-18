@@ -564,7 +564,7 @@ export default class ControlChecklist extends Component {
                 you have already implemented by using the X mark (<b>X</b>) on
                 each control. You can also use the check mark (<b>✔</b>) to
                 indicate controls that are extremely important and you want to
-                highlight them. .
+                highlight them.
               </p>
 
               <p>
