@@ -75,6 +75,12 @@ function SEO({ description, lang, meta, title }) {
         integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
         crossorigin="anonymous"
       ></link>
+
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-12439564-15"
+      ></script>
+      <script src="/gtag.js"></script>
     </Helmet>
   )
 }
