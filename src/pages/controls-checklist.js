@@ -509,7 +509,10 @@ export default class ControlChecklist extends Component {
 
     return (
       <Layout>
-        <SEO title="Controls" />
+        <SEO
+          title="Controls Checklist"
+          description="Technical Security Controls CyberSecurity Baseline Blueprint Recommendations Categories"
+        />
 
         <div class="page-content control-page">
           <div class="row">

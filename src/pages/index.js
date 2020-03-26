@@ -67,7 +67,10 @@ export default class index extends Component {
     )
     return (
       <Layout>
-        <SEO title="Home" />
+        <SEO
+          title="Security 4 Startups"
+          description="Security 4 Startups Cyber Security for Startup"
+        />
 
         <div className="page-content">
           <div className="row">

@@ -73,7 +73,10 @@ export default class AppSecurity extends Component {
     )
     return (
       <Layout>
-        <SEO title="SDLC" />
+        <SEO
+          title="SDLC"
+          description="Security Development Life Cycle Lifecycle Simple Easy Digestable SDLC"
+        />
         <div class="page-content sdlc-page">
           <div class="row">
             <div

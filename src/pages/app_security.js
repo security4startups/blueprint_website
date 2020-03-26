@@ -157,7 +157,10 @@ export default class AppSecurity extends Component {
     )
     return (
       <Layout>
-        <SEO title="App Security" />
+        <SEO
+          title="App Security"
+          description="Application Security Checklist CyberSecurity Guidelines Developer"
+        />
 
         <div class="page-content control-page appsec">
           <div class="row">

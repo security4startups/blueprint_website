@@ -139,7 +139,10 @@ export default class AppSecurity extends Component {
     )
     return (
       <Layout>
-        <SEO title="Risk Profile" />
+        <SEO
+          title="Risk Profile"
+          description="Business Security Prioritization Dynamic CyberSecurity Questionaire Risk Assessment"
+        />
         <div class="page-content survey-page">
           <a id="downloadAnchorElem" style={{ display: "none" }}></a>
           <div class="row">
