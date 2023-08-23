@@ -4,6 +4,7 @@ module.exports = {
     description: `Security 4 Startups (“S4S”) is a free open-source initiative created by a working group of CISOs to empower startups to implement security measures in a cost-effective way and enable growth`,
     author: `vjhameed`,
   },
+  pathPrefix: "/public",
   plugins: [
     `gatsby-plugin-react-helmet`,
     {

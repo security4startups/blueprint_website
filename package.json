@@ -12,6 +12,7 @@
     "antd": "^3.22.2",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
+    "express": "4.18.2",
     "excel4node": "^1.7.2",
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
@@ -43,7 +44,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "node server.js",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
