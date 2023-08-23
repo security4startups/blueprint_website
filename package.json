@@ -4,6 +4,9 @@
   "description": "Security 4 Startups Cyber Security for Startup",
   "version": "0.1.0",
   "author": "vjhameed3@gmail.com",
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
     "@react-pdf/renderer": "^1.6.4",
     "antd": "^3.22.2",
