@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "vjhameed3@gmail.com",
   "engines": {
-    "node": "18.x"
+    "node": "17.x"
   },
   "dependencies": {
     "@react-pdf/renderer": "^1.6.4",
