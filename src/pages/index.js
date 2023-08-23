@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import React, { Component } from "react"
 import Sidebar from "react-sidebar"
 import logo from "../assets/images/s4slogo.png"
-
+// test deployment
 export default class index extends Component {
   state = {
     sidebarOpen: false,
