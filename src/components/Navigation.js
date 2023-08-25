@@ -129,7 +129,7 @@ class Navigation extends React.Component {
                     Join Us:
                   </span>{" "}
                   <a
-                    href="http://slack.security4startups.com/"
+                    href="https://join.slack.com/t/security4startups/shared_invite/zt-1xije5rrr-O8qzXCzRpAV5LAUwWyDvcg"
                     target="_blank"
                     className="nav-link px-0"
                   >

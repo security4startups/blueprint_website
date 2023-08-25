@@ -247,7 +247,7 @@ export default class index extends Component {
               <ul>
                 <li>
                   You're invited to the{" "}
-                  <a target="_blank" href="http://slack.security4startups.com/">
+                  <a target="_blank" href="https://join.slack.com/t/security4startups/shared_invite/zt-1xije5rrr-O8qzXCzRpAV5LAUwWyDvcg">
                     S4S Slack channel
                   </a>{" "}
                   to interact with like-minded community members as well as
