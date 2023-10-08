@@ -19,6 +19,7 @@ import "../assets/styles/sdlc.css"
 import "../assets/styles/style.css"
 import "../assets/styles/zmobile-design.css"
 import Navigation from "./Navigation"
+import Footer from "./Footer"
 import Redirect from "./Redirect"
 
 const Layout = ({ children }) => {
@@ -27,6 +28,7 @@ const Layout = ({ children }) => {
       <Navigation />
       <main>{children}</main>
       {/* <Redirect /> */}
+      <Footer/>
     </div>
   )
 }
